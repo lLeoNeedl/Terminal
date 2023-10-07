@@ -1,6 +1,5 @@
 package com.example.terminal.data
 
-import kotlinx.coroutines.flow.Flow
 import retrofit2.http.GET
 
 interface ApiService {
