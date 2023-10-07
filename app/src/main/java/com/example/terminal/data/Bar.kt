@@ -1,10 +1,13 @@
 package com.example.terminal.data
 
+import android.os.Parcelable
 import androidx.compose.runtime.Immutable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 import java.util.Calendar
 import java.util.Date
 
+@Parcelize
 @Immutable
 data class Bar(
     @SerializedName("o")
@@ -17,7 +20,7 @@ data class Bar(
     val high: Float,
     @SerializedName("t")
     val time: Long
-) {
+): Parcelable {
 
     val calendar: Calendar
         get() = Calendar.getInstance().apply {
